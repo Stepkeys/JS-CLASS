@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    <div class="container">
+
+    </div> -->
+
+    <script>
+
+        // let function1 = function (number1 = 4, number2 = 5, theSymbol){
+        //     if  (theSymbol === 'divide'){
+        //         console.log(number1/number2)
+        //     }else{
+        //         console.log(number1 + number2)
+        //     }
+        // }
+        // let number1 = 67
+        // let number2 = 6
+        // function1(number1/number2)
+        // function1(2, 23, 'divide')
+        // function1(5, 0, 'subturact')
+        // function1(200, 19, 'add')     
+
+
+        let myObj = {
+            name: 'shallom',
+
+            class: 'js',
+
+            sayName: function () {
+                console.log(`my name is ${this.name}`);
+            }
+
+        }
+
+        // myObj.jump = function(){
+        //     console.log(`i am jumping ${this.class}`);
+        // } 
+
+        // myObj.caller = 'stephen'
+
+
+        // console.log(myObj.name);
+        // myObj.sayName()
+        // myObj.jump()
+        // console.log(myObj,caller);
+        // console.log(myObj);
+
+        // const objCopy = Object.assign({},myObj)
+
+        // let arr1 = [1,2,3,4]
+        // let arr2 = [1,2,3,4]
+
+        // if (arr1 == arr2){
+
+        // }
+
+
+        const users = {
+            Alex: {
+                email: 'alex@gmail,com',
+                skills: ['HTML', 'CSS', 'JavaScript'],
+                age: 20,
+                isLoggedIn: false,
+                points: 30
+            },
+            daniel: {
+                email: 'alex@gmail,com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'python'],
+                age: 20,
+                isLoggedIn: true,
+                points: 40
+            },
+            stephen: {
+                email: 'alex@gmail,com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'react.js', 'node.js'],
+                age: 20,
+                isLoggedIn: false,
+                points: 50
+            },
+            guy: {
+                email: 'alex@gmail,com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'react.js', 'node.js', 'python'],
+                age: 20,
+                isLoggedIn: true,
+                points: 60
+            }
+        }
+
+        let above50Users = []
+        let loggedInUsers = []
+        let above50Count = 0
+        let loggedInCount = 0
+        for (const key in users) {
+            if (users[key].isLoggedIn === true) {
+                loggedInCount++
+                loggedInUsers.push(key)
+            }
+        }
+
+        console.log(`loggedin users: ${loggedInCount} , (${loggedInUsers})`);
+
+    </script>
+</body>
+
+</html>

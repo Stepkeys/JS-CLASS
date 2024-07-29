@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button></button>
+    <h1 id="colors"></h1>
+
+    <script>
+       
+        function ranColor() {
+
+             function randomNum() {
+            return Math.ceil(Math.random() * 255)
+        }
+
+            return `rgb (${randomNum()}, ${randomNum()}, ${randomNum()})`
+        }
+
+        function generateHexa() {
+            let hexa = '' 
+            let arr = ['a', 'b', 'c', 'd', 'e', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+           
+
+            for (let index = 0; index < 6; index++) {
+                let picker = Math.floor(Math.random() * arr.length)
+
+
+                hexa += arr[picker]
+            }
+
+            return `#${hexa}`
+
+        }
+
+
+        function chooseColorType(colorType) {
+            
+        }
+
+        setInterval(() => {
+            document.body.style.backgound = `${ranColor()}`
+        }, 5000);
+      
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="Enter value" id="inputField">
+    <button onclick="action('push')">Push</button>
+    <button onclick="action('pop')">Pop</button>
+
+    <script>
+        let input = document.getElementById('inputField')
+        let arr = []
+
+        function action(params) {
+            if (params === 'push'){
+                arr.push(input.value)
+            } else{
+                arr.pop()
+            }
+            console.log(arr);
+        }
+    </script>
+
+</body>
+</html>

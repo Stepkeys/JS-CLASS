@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="search">
+        <!-- <input type="text" oninput="search()" id="input"> -->
+        <!-- <ol id="tb"></ol>         -->
+
+        <input id="fem" type="text" oninput="testValue()" aria-checked="undefined">
+    </form>
+
+    <script>
+    //    let arr = ['Hp', 'Asus', 'Dell', 'Macbook', 'Tosheba', 'Touch']
+       
+
+    let regex1 = /^[i] [a][m] [e][a][t][i][n][g]/
+    let val = 'i am eating .com68669667579'
+
+    console.log(regex1.test(val));
+
+    let patter = /\d{2,5}$/i
+    console.log(patter.test(val));
+
+    
+
+    </script>
+</body>
+</html>

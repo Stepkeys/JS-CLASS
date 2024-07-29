@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: -webkit-linear-gradient(left, cyan, skyblue, blue);
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 3px #666;
+            width: 450px;
+            height: 550px;
+            gap: 20px;
+            margin: 5%;
+            border-radius: 10px;
+            transition: all .5s linear;
+        }
+
+        h1 {
+            width: 400px;
+            margin-left: 60px;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00f;
+            color: #000;
+            width: 300px;
+            padding: 20px;
+            height: 90px;
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .guess {
+            width: 350px;
+            height: 50px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: transparent;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .guessSubmit {
+            width: 100px;
+            height: 50px;
+            background-color: #666;
+            color: #000;
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+
+        <h1>Guess The Number</h1>
+        <p id="tb">
+            We have selected a random number
+            between 1 - 10. See if you can
+            guess it.
+        </p>
+
+        <div class="form">
+            <label for="guessField">
+                Enter a guess:
+            </label>
+
+            <input type="text" id="guessField" class="guess" required>
+
+
+            <input type="submit" value="Submit" class="guessSubmit" id="submit">
+
+        
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        let y = Math.floor(Math.random() * 10 + 1);
+
+        let guess = 1;
+
+        document.getElementById("submit").onclick = function () {
+
+            let x = document.getElementById("guessField").value;
+            if (x == y) {
+                alert(" CONGRATULATIONS!!! YOU GUESSED IT RIGHT 🥳 ", " + guess + GUESS");
+            }
+            else if (x > y) {
+                guess++;
+                alert(" OOPS SORRY!! TRY A SMALLER NUMBER ");
+            }
+            else {
+                guess++;
+                alert(" OOPS SORRY!! TRY A GREATER NUMBER ")
+            }
+        }
+
+
+        let myPrompt = window.prompt('enter name', 'input name here')
+
+        if (myPrompt.trim().toLowerCase() !== '') {
+            alert(`Welcome  ${myPrompt}`)
+        } else {
+            alert('you did not type in a value')
+        }
+
+    </script>
+</body>
+
+</html>

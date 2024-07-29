@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #rn {
+            border: 1px solid #000;
+            background-image: -webkit-linear-gradient(left, yellow, orange, red);
+            width: 400px;
+            height: 500px;
+            animation-name: aa;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            width: 200px;
+            height: 100px;
+            background-color: #00f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            border-radius: 10px;
+            font-weight: 700;
+            box-shadow: 3px 3px 1px 1px;
+            transition: all .5 linear;
+        }
+
+        button:hover {
+            color: #fff;
+            background-color: #000;
+            translate: 10px 10px;
+        }
+
+        /* @keyframes aa {
+            from {
+                width: 0%;
+            }
+            to{
+                width: 100%;
+            }
+        } */
+
+        p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="rn">
+        <p id="tb"></p>
+
+
+        <button id="aa" onclick="document.getElementById('tb').innerHTML = getRndInteger(0,1000)">Click Me</button>
+    </form>
+    <script>
+        document.getElementById('tb').style.fontSize = "30px"
+        document.getElementById('tb').style.fontWeight = "500"
+        document.getElementById('tb').style.color = "#000"
+        document.getElementById('tb').style.background = "#666"
+        document.getElementById('tb').style.marginBottom = "40px"
+        document.getElementById('tb').style.height = "70px"
+        document.getElementById('tb').style.width = "70px"
+        document.getElementById('tb').style.display = "flex"
+        document.getElementById('tb').style.justifyContent = "center"
+        document.getElementById('tb').style.alignItems = "center"
+        document.getElementById('tb').style.boxShadow = "3px 3px 0 0"
+
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+
+
+        var r = confirm('Agree to work with all cookies ');
+        if (r == true) {
+            x = " You pressed Accept! ";
+        } else {
+            x = " You pressed Cancel! ";
+        }
+
+        // let myPrompt = window.prompt('enter name', 'input name here')
+        // alert(myPrompt)
+
+        // window.alert('Welcome User')
+        // let confirm = window.confirm('are you sure')
+
+        let one = 1
+        let two = 2
+
+        // if (one > two) {
+        //     alert(`${one} is the greater value`)
+        // } else if (one < two) {
+        //     alert(`${two} is the greater value`)
+        // } else {
+        //     alert(`${one} and ${two} are epual`)
+        // }
+
+
+        // switch ('true') {
+        //     case one > two:
+        //         alert(`${one} is the greater value`);
+        //         break;
+        //     case one < two:
+        //         alert(`${two} is the greater value`)
+        //     default:
+        //         alert(`${one} and ${two} are equal`);
+        //         break;
+        // }
+
+
+        // one > two ? console.log('one is the greater value') : console.log('two is the greater value') 
+
+        // if(confirmValue) {
+        //     alert('name deleted');
+        // } else {
+        //     alert('couldnt delete at moment')
+        // }
+
+
+        // let myPrompt = window.prompt('enter name', 'input name here')
+
+        // if (myPrompt.trim().toLowerCase() !== ''){
+        //     alert('you did not type in a value')
+        // } else {
+        //     alert(`hi ${myPrompt}`)
+        // }
+
+        let regex1 = /^[A-Za-z] \w+ \w+$/i
+        let val = 'i am eating '
+
+        console.log(regex1.test(val));
+
+    </script>
+</body>
+
+</html>

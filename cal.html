@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script type="text/javascript">
+
+
+
+        function daysInMonth(month, year) {
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    return 31;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    return 30;
+                case 2:
+                    return (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) ? 29 : 28;
+                default:
+                    return -1;
+            }
+        }
+
+
+        let month = 12;
+        let year = 2024;
+        console.log("Number of days in" + month + "th month of the year" + year + "is" + daysInMonth(month, year));
+
+
+        const ages = [19, 22, 19, 22, 20, 25, 24]
+        ages.sort()
+        console.log(ages);
+
+
+
+        //    Math.min(...ages)
+        //   let maxAge
+
+
+        //    if (ages.length % 2 === 1) {
+        //     let index = Math.floor([ages.length / 2])
+        //     let median = ages[index]
+        //     console.log(median);
+        //    }else{
+        //     let firstIndex = ages.length/2
+        //     let secondIndex = firstIndex -1
+        //     let median = (ages[firstIndex] + ages[secondIndex])
+        //     console.log(median);
+        //    }
+
+        //    let average = (ages[0] + ages[1] + ages[2] + ages[3] + ages[4] + ages[5]) / ages.length
+        //    console.log(average);
+
+
+        // for(let i = 0; i < 10 ; i++ ){
+        //   console.log('hi');
+        // }
+
+
+        for (let i = 20; i >=0; i--){
+            console.log('hi');
+            console.log(i);
+        }
+
+
+        for (let i = 1; i < 13; i++) {
+            console.log(`2 * ${i} = ${2 * i}`);
+        }
+
+        // const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+        // const newArr = []
+        // for(let i = 0; i <)
+
+        let arrString = ['hi', 'my', 'name', 'is', 'stephen']
+        let val = ''
+        for (let i = 0; i < ages.length; i++) {
+            val = val + ages[1]
+        }
+
+        console.log(val);
+
+        let i = 5
+        while (i > 0) {
+            console.log(i);
+            i--
+        }
+
+        let w = 5
+        do {
+            console.log(w);
+            w++
+        } while (w <= 5)
+
+        for (const num of nums) {
+            console.log(num)
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

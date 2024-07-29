@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5,]
+
+        let sum = 0
+        arr.forEach((num) => {
+            sum = sum + num
+        })
+        console.log(sum);
+
+        let arr3 = [{ num: 1 }, { num: 2 }, { num: 3 }, { num: 4 }]
+        let sum2 = arr3.reduce((a, c) => {
+            return a + c.num
+        })
+
+        console.log(sum);
+
+        let findSome = arr3.some((obj) => {
+            return obj.num === 5
+        })
+    </script>
+</body>
+
+</html>

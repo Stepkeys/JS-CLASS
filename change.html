@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            width: 100%;
+            height: 100vh;
+            border: 3px;
+            background-image: conic-gradient(from var(--border-angle), #213, #312 50%, #413),
+                conic-gradient(from var(--border-angle), transparent 20%, #255, #345);
+            background-size: calc(100% - (var(--border-size)*2)) calc(100% - (var(--border-size)*2), cover);
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-animation: bg-spin 3s linear infinite;
+            animation: bg-spin 3s linear infinite;
+        }
+
+        @keyframes bg-spin {
+            to {
+                --border-angle: 1turn
+            }
+        }
+
+
+        @property --border-angle {
+            syntax: "<angle>";
+            inherits: true;
+            initial-value: 0turn;
+        }
+
+        .body:hover {
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+
+    </style>
+</head>
+
+<body id="change">
+
+   <div class="body">
+    
+    </div>
+    <script>
+
+        function addVal(e){
+            if(ev.target.value == '5'){
+              ev.target.innertext = 'Click'
+            }else{
+                ev.target.innertext = 'dont click'
+            }
+        }
+
+        function doThis(e){
+            e.target.style.background
+        }
+
+
+
+        // document.getElementById('change').style.backgroundColor = 'white'
+
+        // function ChangeBg(){
+        //     let body = document.getElementById('change')
+        //     body.style.backgroundColor === 'white'
+        //     ?body.style.background = 'black'
+        //     :body.style.backgroundColor = 'white'
+        // }
+
+    </script>
+</body>
+
+</html>
